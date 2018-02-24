@@ -1,0 +1,336 @@
+webstorm/phpstorm 	Bootstrap
+
+# html(Hyper Text markup language 超文本标记语言)
+
+特点：将内容包裹起来
+
+## 标记/标签
+
+#### 行标签：不会独占一行，不能设定宽高。如span、a（href title target）、i、em、b、strong、time、address、progress
+
+#### 块元素：独占一行，可以设定宽高。div、h1~h6、p、pre、ul、li、ol、dl、dt、dd、header、footer、section、video、audio、main、from
+
+#### 行内块级标签：不会独占一行，可以设定宽高。img（src alt width hight border）input、textarea、select、option、fieldset
+
+### 实体：&nbsp；&lt；&gt；&quot；&amp；在html里不方便展现的格式
+
+## 表单
+
+### form:（action  method）
+
+#### 表单控件：
+
+类型：input（text  password  radio  CheckBox  file   hidden submit  reset  button）（h5新增的email URL date  week  month  time  datetime-local   number   range   search  color）
+
+属性：（type  name  value   readOnly   disable  checked  selected  maxlength  ）（require  placeholder）
+
+# css
+
+## 引用方式：
+
+#### 行内样式   style=“width：10px;hight:10px;”
+
+#### 嵌入样式   <style >one.{width:100px;}</stryle>
+
+#### 外部样式   <link   rel='stylesheet'  herf=”“>
+
+#### 引入样式  @import  url("demo.css");  @import "demo.css"
+
+### 选择器：
+
+##### 标签选择器   div     body    a
+
+##### 类名选择器   .one
+
+##### id选择器：   #one   只能控制单个元素
+
+##### 后代选择器     ul li     .one  .two
+
+##### 群组选择器      .one ,.two
+
+##### 交叉选择器     ul .one   .one.two
+
+##### UI伪类选择器     ：hover    ：active    ：visited    ：link
+
+##### 子选择器   div>a    .one>.two
+
+##### 同级选择器  div+p  div~p
+
+:nth-child()   :first-child  :last-child  :nth-last-child()
+
+:only-child
+
+:nth-of-type()
+
+:first-of-type()      :last-of-type()     :nth-last-of-type()
+
+:only-of-type()
+
+##### 属性选择器  
+
+#####  [data]
+
+##### [ data==aa]
+
+[data^=aa]
+
+[data$=aa]
+
+[data*=aa]
+
+##### :before  :after
+
+##### :checked   被选中
+
+##### :target  :root(选中当前文档的根元素)
+
+## 属性
+
+### 布局
+
+##### width宽  hight 高   margin   padding    float浮动   position 定位   box-sizing   display转换    left  right  top   bottom   z-index     
+
+### 样式
+
+##### 背景：background   
+
+##### 背景图片： background-image   
+
+##### 背景颜色：background-color 
+
+##### 背景是否平铺：background-repeat 
+
+##### 设置固定的背景图像：background-attachment
+
+##### 边框border  
+
+##### 边框宽度border-width  
+
+##### 边框样式border-style 
+
+##### 边框颜色 border-color
+
+##### border-origin
+
+
+
+##### 用来决定图片原始起始位置：background-origin
+
+##### 背景大小：background-size
+
+##### 将背景图片做适当的裁剪：background-clip
+
+##### 边框图片的各种效果border-image  
+
+##### 设置圆角边框：border-radius  
+
+##### 设置盒子阴影：box-shadow
+
+##### 设置边框大小、样式、颜色：outline：1px  solid red；不占布局位置 边框  
+
+##### 边框偏移：outline-offset
+
+### 渐变
+
+##### 创建一个表示两种或多种颜色线性渐变的图片：linear-gradient     
+
+##### 可以实现线性重复渐变效果：repeating-linear-gradient       
+
+##### 可以实现径向渐变：radial-gradient()     
+
+##### 可以实现径向重复渐变效果：repeating-radial-gradient()
+
+### 文字
+
+##### 设置文字的字体：font-family   
+
+##### 设置文字的大小：font-size  
+
+##### 设置文字的颜色：color   
+
+##### 设置文字的粗细：font-weight   
+
+##### 设置文字的样式：font-style   
+
+##### 表示属性规定添加到文本修饰：text-decoration  
+
+#####  设置文本的居中效果：text-align  
+
+##### 设置文本块中首行文本的缩进： text-indent  
+
+##### 设置文本的垂直居中： line-height  
+
+##### 设置或检索对象内文本字内换行行为：Word-break
+
+##### 设置文本内字符之间最小、最大和最佳间隙：letter-spacing   vertical-align
+
+### 动画
+
+##### 动画：transition  
+
+##### 指定过渡或动态模拟的css属性： transition-property   
+
+##### 指定完成过渡所需的时间： transition-duration  
+
+##### 指定过渡函数： transition-timing-function   
+
+##### 设置延迟时间： transition-delay
+
+##### @keyframe         animation
+
+@keyframes rotate{
+
+			0%{
+				transform: rotate(0deg);
+	
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+		div{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			animation-name: rotate;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			/*匀速*/
+			animation-delay: 2s;
+			animation-iteration-count: infinite;
+			/*无限制，延迟第一次有*/
+			animation-direction: alternate;
+			/*交替正和倒着播放*/
+			animation-fill-mode: forwards;
+		}
+		div:hover{
+			animation-play-state: paused;
+		}
+		/*当需要将它停止时当鼠标指向的时候*/
+	</style>
+### 转换
+
+##### 转换：transform   
+
+##### 更换元素的位置：transform-origin     
+
+##### 定义 3D 元素距视图的距离：perspective 
+
+#####  指定嵌套元素是怎样在三维空间中呈现：transform-style      
+
+##### 定义 3D 元素所基于的 X 轴和 Y 轴：perspective-origin
+
+##### 定义2d转换：translate   
+
+##### 使用x值进行转换：translateX    使用y值进行转换：translateY    使用z值进行转换：translateZ     定义3d转换： translate3d()
+
+##### 定义2d旋转，在参数中规定角度rotate()        定义沿着 X 轴的 旋转：rotateX()    定义沿着 Y 轴的 旋转：rotateY ()   定义沿着 Z 轴的 旋转：rotateZ ()   定义 3D 旋转：rotate3d()
+
+##### 定义2d缩放转换：scale()	     通过设置 X 轴的值来定义缩放转换：scaleX()       通过设置 Y 轴的值来定义缩放转换：scaleY ()         
+
+##### 定义2d的倾斜转换：skew()        定义沿着 X 轴的 2D 倾斜转换： skewX()     定义沿着 Y 轴的 2D 倾斜转换： skewY ()  
+
+##### 定义 2D 转换，使用六个值的矩阵：matrix()
+
+### 表格的表示方法：
+
+border-collapse: collapse;表格标题的表示方法
+
+	text-align: center;文本居中
+	table-layout: fixed;表格固定
+.biaoge td,.biaoge th{
+
+			width: 200px;
+			height:200px;
+			border: 1px solid red;
+		}
+		.biaoge caption{
+			text-align: center;
+		}
+		.biaoge1 td{
+			width: 200px;
+			height: 100px;
+			border: none;
+			border-bottom: 1px solid red;
+		}
+		.biaoge1 tr:last-child>td{
+			border: none;
+		}
+		colspan：2 两列进行合并
+		rowspan：3 三行进行合并
+<table width="600" height="300" border="1" cellspacing="0" align="center" bgcolor="#eee" border-collapse:callapse(去掉行之间的间距) table-layout:fixed（固定表格布局，不让其显示默认的自动换行）
+
+	word-break:break-all(自动换行)>
+		<tr height="150" align="center" valign="top" bgcolor="red" >表格中的行
+			<td width="300" align="center" valign>用来放置内容</td>
+			<td>用来放置内容</td>
+			<td>用来放置内容</td>
+		</tr>
+		<tr>表格中的行
+			<td>用来放置内容</td>
+			<td>用来放置内容</td>
+			<td>用来放置内容</td>
+		</tr>
+		<tr>表格中的行
+			<td>用来放置内容</td>
+			<td>用来放置内容</td>
+			<td>用来放置内容</td>
+		</tr>
+	</table>
+响应式：
+
+*{
+
+			box-sizing: border-box;
+		}
+		.contener{
+			width: 1200px;
+			height: auto;
+			margin: 0 auto;
+		}
+		.item{
+			/*width: 25%;*/
+			width: 50%;
+			height: auto;
+			float: left;
+			background-color: red;
+			font-size: 30px;
+			text-align: center;
+			color: #fff;
+			border: 10px solid #fff;
+			padding-top: 25%;
+			position: relative;
+		}
+		.item1{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			color: #fff;
+			left: 0;
+			top: 0;
+		}
+		@media screen and (max-width:1200px){
+			.contener{
+				width: 1000px;
+			}
+		}
+		@media screen and (max-width:1080px){
+			.contener{
+				width: 600px;
+			}
+			.item{
+				width: 100%;
+				padding-top: 50%;
+			}
+		}
+		@media screen and (max-width:640px){
+			.contener{
+				width: 100%;
+			}
+			.item{
+				width: 100%;
+				padding-top: 50%;
+			}
+		}
+
+
